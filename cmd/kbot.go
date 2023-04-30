@@ -44,6 +44,7 @@ to quickly create a Cobra application.`,
 		}
 
 		kbot.Handle(telebot.OnText, func(m telebot.Context) error {
+
 			log.Print(m.Message().Payload, m.Text())
 			payload := m.Message().Payload
 
@@ -53,6 +54,7 @@ to quickly create a Cobra application.`,
 			}
 
 			return err
+
 		})
 
 		kbot.Start()
