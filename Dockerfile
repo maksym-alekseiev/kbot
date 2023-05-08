@@ -1,5 +1,5 @@
-ARG TARGETOS
-ARG TARGETARCH
+ARG TARGETOS=linux
+ARG TARGETARCH=arm64
 
 FROM --platform=${TARGETOS}/${TARGETARCH} quay.io/projectquay/golang:1.20 as builder
 
