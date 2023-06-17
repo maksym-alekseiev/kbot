@@ -27,23 +27,15 @@ spec:
       {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      volumes:
-      - hostPath:
-          path: /dev/mem
-          type: ""
-        name: dev-mem
       containers:
-        - name: {{ .Release.Name }}
+        - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          volumeMounts:
-          - mountPath: /dev/mem
-            name: dev-mem
           image: {{ .Values.image.repository }}/{{ .Chart.Name }}:{{ .Values.image.tag }}-{{ .Values.image.arch | default "amd64"}}
           env:
-          - name: {{ .Values.secret.tokenName}}
-            valueFROM:
+          - name: {{ .Values.secret.tokenName }}
+            valueFrom:
               secretKeyRef:
-                key: {{ .Values.secret.tokenKey}}
-                name: {{ .Values.secret.name}}
+                key: {{ .Values.secret.tokenKey }}
+                name: {{ .Values.secret.name }}
               
