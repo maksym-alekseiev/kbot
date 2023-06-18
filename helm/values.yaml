@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: maksymalekseiev
-  tag: "v1.0.2-bbe9926"
+  tag: "v1.0.2-84c054d"
   arch: amd64
 secret:
   name: "kbot"
