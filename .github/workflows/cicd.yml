@@ -23,5 +23,5 @@ jobs:
             - name: Build&Push
               env:
                 APP: "kbot"
-                REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
+                REGISTRY: ghcr.io/${{ github.actor }}
               run: make image push
