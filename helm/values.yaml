@@ -6,7 +6,8 @@ image:
   registry: "ghcr.io"
   repository: "maksym-alekseiev"
   tag: "v1.0.2-b40efc5"
-  arch: amd64
+  os: "linux"
+  arch: "amd64"
 secret:
   name: "kbot"
   tokenKey: "token"
