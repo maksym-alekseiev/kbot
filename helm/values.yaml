@@ -5,7 +5,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "maksym-alekseiev"
-  tag: "v1.0.2-84c054d"
+  tag: "v1.0.2-b40efc5"
   arch: amd64
 secret:
   name: "kbot"
