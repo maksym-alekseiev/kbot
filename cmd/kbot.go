@@ -60,7 +60,7 @@ to quickly create a Cobra application.`,
 				err = m.Send("I'm Kbot !")
 			case "what is your version":
 				err = m.Send(fmt.Sprintf("My version is %s!", appVersion))
-			case "Develop":
+			case "develop":
 				err = m.Send("Seems like you are testing something !")
 			default:
 				err = m.Send("Sorry I did not get it")
