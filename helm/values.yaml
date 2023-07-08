@@ -5,7 +5,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "maksym-alekseiev"
-  tag: "v1.0.2-af358a3"
+  tag: "v1.0.2-85a60de"
   os: "linux"
   arch: "amd64"
 secret:
